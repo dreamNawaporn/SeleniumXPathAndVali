@@ -33,13 +33,13 @@ class Appointment {
 		WebElement radio1 = driver.findElement(By.xpath("//*[@id=\"radio_program_medicaid\"]"));//ต้องลบ div id=searchCountPages ออกก่อนถึงจะรันได้//*[@id=\"radio_program_none\"]
 		radio1.click();
 		driver.findElement(By.xpath("//*[@id=\"txt_visit_date\"]")).sendKeys("25/01/2023");
-		driver.findElement(By.xpath("//*[@id=\"txt_comment\"]")).sendKeys("Worapakorn Jarusiriphot");
+		driver.findElement(By.xpath("//*[@id=\"txt_comment\"]")).sendKeys("Nawaporn Boongon");
 		driver.findElement(By.xpath("//*[@id=\"btn-book-appointment\"]")).click();
 
 
 		String result = driver.findElement(By.id("comment")).getText();
 
-		assertEquals("Worapakorn Jarusiriphot", result);
+		assertEquals("Nawaporn Boongon", result);
 		
 		String title = driver.getTitle();
 		System.out.println(title);
